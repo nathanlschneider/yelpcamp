@@ -6,13 +6,13 @@ app.get("/", function (req, res) {
     res.render("landing");
 });
 
-app.get("/campgrounds", function(req, res) {
+app.get("/campgrounds", function (req, res) {
     var campgrounds = [
-        {name:"Salmon Creen", image:""},
-        {name:"Granite Hill", image:""},
-        {name:"Mountain Goat's Rest", image:""}
+        { name: "Salmon Creen", image: "https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg?auto=compress&cs=tinysrgb&h=350" },
+        { name: "Granite Hill", image: "https://images.pexels.com/photos/1061640/pexels-photo-1061640.jpeg?auto=compress&cs=tinysrgb&h=350" },
+        { name: "Mountain Goat's Rest", image: "https://images.pexels.com/photos/216676/pexels-photo-216676.jpeg?auto=compress&cs=tinysrgb&h=350" }
     ];
-    res.render("campgrounds");
+    res.render("campgrounds", { campgrounds: campgrounds });
 });
 
 app.listen(3000);
